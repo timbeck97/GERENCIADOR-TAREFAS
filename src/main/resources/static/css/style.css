@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body{
+  background: rgb(3,16,83);
+  background: radial-gradient(circle, rgba(3,16,83,1) 18%, rgba(247,30,210,1) 100%); 
+  font-family: 'Poppins', sans-serif; 
+}
+.container {
+  width: 60vw;
+  height: auto;
+  margin: 40px auto;
+  background-color: #FFFFFF;
+  padding:40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  border-radius: 7px;
+  
+  
+}
+.container h1{
+  text-align: center;
+}
+.circulo {
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  background: silver;
+  position: relative;
+  margin-top: 20px;
+  
+}
+.circulo::after, .circulo::before {
+  position: absolute;
+  content: "";
+  width:100px;
+  height: 2px;
+  background-color: silver;
+  right:20px;
+  bottom: 50%;
+}
+.circulo::before {
+  left: 20px;
+}
+.opcoes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+}
+.opcoes a{
+  margin-left: 50px;
+  
+
+}
+.opcoes :first-child{
+  margin-left: 0px;
+}
+.opcoes button, .bt-enviar{
+  height: 40px;
+  border-radius: 15px;
+  font-weight: bold;
+  color:white;
+  background-color: #cd22d3;
+  cursor: pointer;
+  padding: 0px 10px;
+  border:none;
+  box-shadow: 1px 1px 2px black;
+}
+.opcoes button:hover{
+  background-color:rgba(172, 16, 177, 0.884) ;
+}
+.tabela-tarefas{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.tabela-tarefas table{
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border: 1px solid rgba(250, 227, 250, 0.884);;
+  border-radius: 2px;
+}
+.tabela-tarefas td{
+  padding-left: 5px;
+}
+.tabela-tarefas td a{
+  cursor: pointer;
+}
+.icon-table{  
+  text-align: center;
+  width: 100px;
+  
+}
+.tabela-tarefas th{
+  text-align: center;
+  background-color: rgba(172, 16, 177, 0.884);
+  color:white;
+  
+}
+.tabela-tarefas tr:nth-child(even){
+  background-color: hsl(300, 3%, 93%);
+}
+.tabela-tarefas tr:hover{
+  background-color: silver;
+}
+.buscar{
+  margin-top: 40px;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid silver;
+}
+
+.buscar span{
+  position: absolute;
+  left: 6px;
+  top:0px;
+  transform: translateY(50%);
+  pointer-events: none;
+  transition: .4s;
+  color: silver;
+  Font-family: 'Poppins', sans-serif; 
+}
+.buscar input{
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+  padding-left: 5px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.buscar input:focus ~ span,
+.buscar input:active ~span {
+  content: '';
+  top:-30px;
+  color:rgb(143, 0, 95);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  
+}
+.bt-enviar{
+  margin-top: 15px;
+  height: 30px;
+}
+.container-busca{
+  width: 100%;
+}
+.janela{
+    display:none;
+    width:500px;
+    height:150px;
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    background:rgb(255, 255, 255);
+    z-index:9900;
+    padding: 0px 40px;
+    border-radius:10px;
+    border:1px solid silver;
+    box-shadow: 1px 1px 3px 1px black;
+    
+}
+.fechar{
+  position: absolute;
+  right: 15px;
+  top:5px;
+  cursor: pointer;
+}
+.in-addTarefa{
+  height: 30px;
+}
