@@ -15,7 +15,7 @@ public class Tarefa implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
-	private boolean status;
+	private boolean status=false;
 	
 	public Tarefa() {
 		
