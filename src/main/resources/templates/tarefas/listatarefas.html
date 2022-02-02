@@ -31,10 +31,10 @@
             <tbody>
 
                 <tr th:each="tarefa:${tarefas}">
-                    <td class="icon-table"><span> <i class="fas fa-check"></i></span></td>
+                    <td class="icon-table check"><span><a class="check"> <i class="fas fa-check"></i></a></span></td>
                     <td><span th:text="${tarefa.descricao}"> Limpar a casa </span></td>
-                    <td  class="icon-table"><span> <a><i class="fas fa-pencil-alt a-edit"></a></i> </span></td>
-                    <td  class="icon-table" ><span> <i class="fas fa-times"></i> </span></td>
+                    <td  class="icon-table update"><span> <a><i class="fas fa-pencil-alt a-edit"></a></i> </span></td>
+                    <td  class="icon-table delete" ><span> <a th:href="@{/tarefas/{id}(id=${tarefa.id})}"><i class="fas fa-times delete"></i></a> </span></td>
                 </tr>
                
                 
