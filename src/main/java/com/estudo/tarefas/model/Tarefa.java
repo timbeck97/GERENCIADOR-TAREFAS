@@ -20,6 +20,13 @@ public class Tarefa implements Serializable {
 	public Tarefa() {
 		
 	}
+	
+	public Tarefa(Long id, String descricao, boolean status) {
+		super();
+		this.id = id;
+		this.descricao = descricao;
+		this.status = status;
+	}
 
 	public Long getId() {
 		return id;
