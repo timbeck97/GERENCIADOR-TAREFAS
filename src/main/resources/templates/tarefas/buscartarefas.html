@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tarefas</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <section class="container">
+    <h1>Sistema de gerenciamento de tarefas</h1>
+    <span class="circulo"></span>
+    <div class="opcoes">
+        <a th:href="@{/listatarefas}"><button>Tarefas</button></a>
+        <a th:href="@{/buscartarefas}"><button>Buscar</button></a>
+    </div>
+
+      <div class="container-busca">
+        <form action="#" class="" method="get">
+            <div class="buscar">
+            
+                <input type="text">
+                <span>Procurar tarefa</span>
+                
+           </div>
+           <button type="submit" class="bt-enviar">Enviar</button>
+        </form>
+      </div>  
+
+
+    
+  </section>
+  
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

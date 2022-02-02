@@ -15,8 +15,8 @@
     <h1>Sistema de gerenciamento de tarefas</h1>
     <span class="circulo"></span>
     <div class="opcoes">
-      <a href="#"><button>Tarefas</button></a>
-      <a href="#"><button  class="bt-busca">Buscar</button></a>
+      <a th:href="@{/listatarefas}"><button>Tarefas</button></a>
+      <a th:href="@{/buscartarefas}"><button>Buscar</button></a>
     </div>
     <div class="tabela-tarefas">
         <table>
@@ -30,18 +30,13 @@
             </thead>
             <tbody>
 
-                <tr>
+                <tr th:each="tarefa:${tarefas}">
                     <td class="icon-table"><span> <i class="fas fa-check"></i></span></td>
-                    <td><span> Limpar a casa </span></td>
+                    <td><span th:text="${tarefa.descricao}"> Limpar a casa </span></td>
                     <td  class="icon-table"><span> <a><i class="fas fa-pencil-alt a-edit"></a></i> </span></td>
                     <td  class="icon-table" ><span> <i class="fas fa-times"></i> </span></td>
                 </tr>
-                <tr>
-                  <td class="icon-table"><span> <i class="fas fa-check"></i></span></td>
-                  <td><span> Limpar a casa </span></td>
-                  <td  class="icon-table"><span> <a><i class="fas fa-pencil-alt a-edit"></a></i> </span></td>
-                  <td  class="icon-table" ><span> <i class="fas fa-times"></i> </span></td>
-              </tr>
+               
                 
             </tbody>
         </table>
