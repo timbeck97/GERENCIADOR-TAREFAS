@@ -48,5 +48,10 @@ public class TarefaController {
 		rep.save(tarefa.get());
 		return "redirect:/listatarefas";
 	}
+	@PostMapping(value = "/tarefas/adicionar")
+	public String adicionarTarefa(Tarefa tarefa) {
+		rep.save(tarefa);
+		return "redirect:/listatarefas";
+	}
 	
 }

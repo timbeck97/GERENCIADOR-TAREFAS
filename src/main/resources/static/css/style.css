@@ -198,3 +198,7 @@ form {
   color:red;
   
 }
+.container-adicionar{
+	display:none;
+	width:50%;
+}
