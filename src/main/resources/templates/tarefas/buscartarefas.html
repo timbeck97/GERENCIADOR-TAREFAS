@@ -19,10 +19,10 @@
     </div>
 
       <div class="container-busca">
-        <form action="#" class="" method="get">
+        <form th:action="@{/tarefas/buscar}" class="" th:object="${tarefas}" method="get">
             <div class="buscar">
             
-                <input type="text">
+                <input type="text" th:name="descricao">
                 <span>Procurar tarefa</span>
                 
            </div>
@@ -30,7 +30,26 @@
         </form>
       </div>  
 
-
+      <div class="tabela-tarefas" th:if="${flag!=null}">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarefa  </th>
+                    <th> Status </th>                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="tarefa:${tarefas}">
+                    <td><span th:text="${tarefa.descricao}"> </span></td>
+                    	<td class="icon-table">
+                    		<div class="status">
+                    		<div th:classappend="${tarefa.status}?div-status:div-status-red"></div>
+                    		</div>
+	                   	</td>                 
+                </tr>              
+            </tbody>
+        </table>
+    </div>
     
   </section>
   

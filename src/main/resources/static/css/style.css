@@ -94,6 +94,8 @@ body{
 }
 .tabela-tarefas td{
   padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .tabela-tarefas td a{
   cursor: pointer;
@@ -201,4 +203,23 @@ form {
 .container-adicionar{
 	display:none;
 	width:50%;
+}
+.status{
+	display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.div-status{
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background-color: rgb(0, 255, 0);
+}
+.div-status-red{
+	
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background-color: red;
 }

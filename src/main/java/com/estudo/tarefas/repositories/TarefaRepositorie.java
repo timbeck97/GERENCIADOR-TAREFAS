@@ -8,4 +8,5 @@ import com.estudo.tarefas.model.Tarefa;
 
 public interface TarefaRepositorie extends JpaRepository<Tarefa, Long> {
 	List<Tarefa> findByStatus(boolean status);
+	List<Tarefa> findByDescricaoContaining(String texto);
 }

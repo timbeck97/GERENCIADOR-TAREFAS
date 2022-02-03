@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.estudo.tarefas.model.Tarefa;
@@ -52,6 +53,15 @@ public class TarefaController {
 	public String adicionarTarefa(Tarefa tarefa) {
 		rep.save(tarefa);
 		return "redirect:/listatarefas";
+	}
+	@GetMapping(value = "/tarefas/buscar")
+	public ModelAndView buscarTarefas(@RequestParam(value = "descricao") String descricao) {
+	ModelAndView mv=new ModelAndView("tarefas/buscartarefas");
+	List<Tarefa> tarefas=rep.findByDescricaoContaining(descricao);
+	tarefas.forEach(System.out::println);
+	mv.addObject("tarefas", tarefas);
+	mv.addObject("flag", true);
+	return mv;
 	}
 	
 }
