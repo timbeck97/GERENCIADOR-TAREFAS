@@ -17,7 +17,7 @@
     <div class="opcoes">
       <a th:href="@{/listatarefas}"><button>Tarefas</button></a>
       <a th:href="@{/buscartarefas}"><button>Buscar</button></a>
-      <a href="#"><button  class="bt-adicionar">Adicionar tarefa</button></a>
+      <a><button  class="bt-adicionar">Adicionar tarefa</button></a>
     </div>
     <div class="container-adicionar">
       <form th:action="@{/tarefas/adicionar}" class="" th:object="${tarefa}" method="post">
@@ -36,7 +36,6 @@
                 <tr>
                     <th>  </th>
                     <th> Tarefa </th>
-                    <th> Alterar </th>
                     <th> Deletar </th>
                 </tr>
             </thead>
@@ -45,7 +44,6 @@
                 <tr th:each="tarefa:${tarefas}">
                     <td class="icon-table check"><span><a class="check" th:href="@{/tarefas/concluir/{id}(id=${tarefa.id})}"> <i class="fas fa-check"></i></a></span></td>
                     <td><span th:text="${tarefa.descricao}"> Limpar a casa </span></td>
-                    <td  class="icon-table update"><span> <a><i class="fas fa-pencil-alt a-edit"></a></i> </span></td>
                     <td  class="icon-table delete" ><span> <a th:href="@{/tarefas/deletar/{id}(id=${tarefa.id})}"><i class="fas fa-times delete"></i></a> </span></td>
                 </tr>
                
@@ -54,20 +52,6 @@
         </table>
     </div>
   </section>
-  <div class="janela" id="janela">
-    <button class="fechar" type=""><i class="fas fa-times fa-2x fechar"></i></button>
-    <div class="container-busca">
-      <form action="#" class="" method="post">
-          <div class="buscar">
-          
-              <input type="text">
-              <span>Alterar tarefa</span>
-              
-         </div>
-         <button type="submit" class="bt-enviar">Alterar</button>
-      </form>
-    </div> 
-  </div>
 
   <script src="/js/main.js"></script>
 </body>

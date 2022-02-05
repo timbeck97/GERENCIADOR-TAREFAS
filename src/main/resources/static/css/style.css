@@ -142,13 +142,14 @@ body{
   border: none;
   background: none;
   outline: none;
+  font-size: 15px;
 }
-.buscar input:focus ~ span,
-.buscar input:active ~span {
-  content: '';
-  top:-30px;
-  color:rgb(143, 0, 95);
+.buscarFocus {
+  content: '' !important;
+  top:-30px !important;
+  color:rgb(143, 0, 95) !important;
 }
+
 form {
   display: flex;
   flex-direction: column;

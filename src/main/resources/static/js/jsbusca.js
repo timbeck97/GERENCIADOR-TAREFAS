@@ -1,10 +1,5 @@
 const add=document.querySelector('.bt-adicionar');
-const divAdicionar=document.querySelector('.container-adicionar');
 
-add.addEventListener('click', function(evento){
-	
-    divAdicionar.style.display==='none'?divAdicionar.style.display='block':divAdicionar.style.display='none';
-});
 
 const inputFocus=document.querySelector('.buscar input');
 const spanInput=document.querySelector('.buscar span');

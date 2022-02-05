@@ -43,7 +43,7 @@
                     <td><span th:text="${tarefa.descricao}"> </span></td>
                     	<td class="icon-table">
                     		<div class="status">
-                    		<div th:classappend="${tarefa.status}?div-status:div-status-red"></div>
+                    		<div th:classappend="${tarefa.status}?div-status-red:div-status"></div>
                     		</div>
 	                   	</td>                 
                 </tr>              
@@ -54,7 +54,7 @@
   </section>
   
 
-  <script src="./assets/js/main.js"></script>
+  <script src="/js/jsbusca.js"></script>
 </body>
 
 </html>
