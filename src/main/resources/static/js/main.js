@@ -1,6 +1,6 @@
 const add=document.querySelector('.bt-adicionar');
 const divAdicionar=document.querySelector('.container-adicionar');
-
+divAdicionar.style.display='none';
 add.addEventListener('click', function(evento){
 	
     divAdicionar.style.display==='none'?divAdicionar.style.display='block':divAdicionar.style.display='none';

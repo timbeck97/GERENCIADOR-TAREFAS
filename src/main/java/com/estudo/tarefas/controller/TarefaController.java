@@ -57,8 +57,7 @@ public class TarefaController {
 	@GetMapping(value = "/tarefas/buscar")
 	public ModelAndView buscarTarefas(@RequestParam(value = "descricao") String descricao) {
 	ModelAndView mv=new ModelAndView("tarefas/buscartarefas");
-	List<Tarefa> tarefas=rep.findByDescricaoContaining(descricao);
-	tarefas.forEach(System.out::println);
+	List<Tarefa> tarefas=rep.findByDescricaoContainingIgnoreCase(descricao);
 	mv.addObject("tarefas", tarefas);
 	mv.addObject("flag", true);
 	return mv;
