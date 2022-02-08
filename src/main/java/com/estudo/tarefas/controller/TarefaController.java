@@ -35,7 +35,7 @@ public class TarefaController {
 	
 	@GetMapping(value = "/buscartarefas")
 	public String buscarTarefas() {
-		return "/tarefas/buscartarefas";
+		return "tarefas/buscartarefas";
 	}
 	@GetMapping(value = "/tarefas/deletar/{id}")
 	public String deletaTarefa(@PathVariable("id")Long id) {
